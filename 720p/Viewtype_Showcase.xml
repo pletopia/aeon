@@ -2659,7 +2659,7 @@
                 <control type="label" id="72">
                     <info>ListItem.Label2</info>
                     <include>ShowcaseDetailLabel</include>
-                    <visible>Window.IsActive(1) | Container.Content(albums) | Window.IsActive(501)</visible>
+                    <visible>Container.Content(albums) | Window.IsActive(501)</visible>
                 </control>
                 <control type="label" id="72">
                     <label>[UPPERCASE]$INFO[ListItem.Episode] $LOCALIZE[31406][/UPPERCASE]</label>

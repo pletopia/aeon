@@ -644,6 +644,13 @@
 		<height>300</height>	
 	</include>		
 
+	<include name="MultiplexTVPostersVarsWrap">
+		<posx>60</posx>
+		<posy>488</posy>
+		<width>1160</width>
+		<height>300</height>	
+	</include>
+
 	<include name="MultiplexIconDimensionsWrap">
 		<posx>6</posx>
 		<posy>0</posy>
@@ -661,6 +668,23 @@
 		<fadetime>200</fadetime>		
 	</include>	
 	
+	<include name="MultiplexIconDimensionsTVPostersWrap">
+		<posx>6</posx>
+		<posy>0</posy>
+		<width>107</width>
+		<height>165</height>	
+		<fadetime>200</fadetime>
+	</include>
+	
+	<include name="MultiplexIconDimensionsTVPostersWrapReflect">
+		<posx>6</posx>
+		<posy>165</posy>
+		<width>107</width>
+		<height>165</height>
+		<colordiffuse>56FFFFFF</colordiffuse>
+		<fadetime>200</fadetime>			
+	</include>	
+		
 	<include name="MultiplexIconDimensionsTVWrap">
 		<posx>4</posx>
 		<posy>0</posy>
@@ -708,8 +732,8 @@
         </control>
 
 		<control type="image">
-			<posx>40</posx>
-			<posy>567</posy>
+			<posx>18</posx>
+			<posy>574</posy>
 			<width>33</width>
 			<height>37</height>
 			<texture>multiplex/multiplex_arrow2.png</texture>
@@ -719,15 +743,15 @@
 		</control>
 		
 		<control type="image">
-			<posx>1207</posx>
-			<posy>567</posy>
+			<posx>1228</posx>
+			<posy>574</posy>
 			<width>33</width>
 			<height>37</height>
 			<texture flipx="true">multiplex/multiplex_arrow2.png</texture>
 			<include>Animation_HideMultiplex</include>
 			<visible>Control.IsVisible(52)</visible>
 			<animation effect="slide" start="0,-30" end="0,-30" time="0" condition="Container.Content(movies)">Conditional</animation>			
-		</control>		
+		</control>					
 		
 		<include condition="Skin.HasSetting(videomovies)">MultiplexInfoPaneMovies</include>	
 		<include condition="Skin.HasSetting(videotv)">MultiplexInfoPaneTV</include>
@@ -735,7 +759,7 @@
 		<control type="wraplist" id="52">
 			<viewtype label="31757">wrap</viewtype>
 			<include condition="Skin.HasSetting(videomovies)">MultiplexMovieVarsWrap</include>
-			<include condition="Skin.HasSetting(videotv)">MultiplexTVVarsWrap</include>			
+			<include condition="Skin.HasSetting(videotv)">MultiplexTVPostersVarsWrap</include>			
 			<pagecontrol>60</pagecontrol>
 			<onleft>52</onleft>
 			<onright>52</onright>
@@ -744,9 +768,9 @@
 			<ondown>60</ondown>
 			<orientation>horizontal</orientation>
 			<include condition="Skin.HasSetting(videomovies)">MultiplexFocusMovies</include>
-			<include condition="Skin.HasSetting(videotv)">MultiplexFocusTV</include>
+			<include condition="Skin.HasSetting(videotv)">MultiplexFocusMovies</include>
 			<scrolltime>200</scrolltime>
-			<visible>Window.IsActive(25)</visible>
+			<visible>Window.IsActive(25) + !Container.Content(episodes) + !Container.Content(seasons)</visible>
 			<include>Animation_HideMultiplex</include>
 			<itemlayout width="120" height="300" condition="Container.Content(movies)">
 				<control type="image">
@@ -812,6 +836,170 @@
 				</control>					
 			</focusedlayout>
 			
+		
+			<itemlayout width="130" height="300" condition="Skin.HasSetting(videotv)">
+				<control type="image">
+					<include>MultiplexIconDimensionsTVPostersWrap</include>
+					<texture diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+				</control>
+				<control type="image">
+					<include>MultiplexIconDimensionsTVPostersWrap</include>
+					<texture background="true" diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<include>MultiplexIconDimensionsTVPostersWrap</include>
+					<bordertexture border="-17">multiplex/multiplex_border.png</bordertexture>
+					<texture>common/blank.png</texture>
+				</control>
+				<control type="image">
+					<include>MultiplexIconDimensionsTVPostersWrap</include>
+					<texture>multiplex/multiplex_glass.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+				</control>				
+				<control type="image">
+					<include>MultiplexIconDimensionsTVPostersWrapReflect</include>
+					<texture background="true" flipy="true" diffuse="multiplex/multiplex_maskreflect.png">defaultvideo.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<info>ListItem.Icon</info>
+				</control>		
+			</itemlayout>
+			<focusedlayout width="130" height="300" condition="Skin.HasSetting(videotv)">
+			<control type="image">
+					<include>MultiplexIconDimensionsTVPostersWrap</include>
+					<texture diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<include>Animation_MultiplexFocusZoom</include>					
+				</control>			
+				<control type="image">
+					<include>MultiplexIconDimensionsTVPostersWrap</include>
+					<texture background="true" diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<info>ListItem.Icon</info>
+					<include>Animation_MultiplexFocusZoom</include>
+				</control>
+				<control type="image">
+					<include>MultiplexIconDimensionsTVPostersWrap</include>
+					<bordertexture border="-17">multiplex/multiplex_border.png</bordertexture>
+					<texture>common/blank.png</texture>
+					<include>Animation_MultiplexFocusZoom</include>					
+				</control>
+				<control type="image">
+					<include>MultiplexIconDimensionsTVPostersWrap</include>
+					<texture>multiplex/multiplex_glass.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<include>Animation_MultiplexFocusZoom</include>						
+				</control>				
+				<control type="image">
+					<include>MultiplexIconDimensionsTVPostersWrapReflect</include>
+					<texture background="true" flipy="true" diffuse="multiplex/multiplex_maskreflect.png">defaultvideo.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<info>ListItem.Icon</info>
+					<include>Animation_MultiplexFocusZoom</include>					
+				</control>			
+			</focusedlayout>		
+			
+			
+		</control>			
+
+
+		<control type="fixedlist" id="52">
+			<viewtype label="31757">wrap</viewtype>
+			<include condition="Skin.HasSetting(videotv)">MultiplexTVPostersVarsWrap</include>			
+			<pagecontrol>60</pagecontrol>
+			<onleft>52</onleft>
+			<onright>52</onright>
+			<include condition="[Skin.HasSetting(videomovies) + Skin.HasSetting(multiplexinfotrigger)] | [Skin.HasSetting(videotv) + Skin.HasSetting(multiplextvinfotrigger)]">MultiplexInfoTriggerUp</include>
+			<ondown>60</ondown>
+			<orientation>horizontal</orientation>
+			<include condition="Skin.HasSetting(videotv)">MultiplexFocusMovies</include>
+			<scrolltime>200</scrolltime>
+			<visible>Window.IsActive(25) + !Container.Content(episodes) + Container.Content(seasons)</visible>
+			<include>Animation_HideMultiplex</include>
+			<itemlayout width="130" height="300" condition="Skin.HasSetting(videotv)">
+				<control type="image">
+					<include>MultiplexIconDimensionsTVPostersWrap</include>
+					<texture diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+				</control>
+				<control type="image">
+					<include>MultiplexIconDimensionsTVPostersWrap</include>
+					<texture background="true" diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<include>MultiplexIconDimensionsTVPostersWrap</include>
+					<bordertexture border="-17">multiplex/multiplex_border.png</bordertexture>
+					<texture>common/blank.png</texture>
+				</control>
+				<control type="image">
+					<include>MultiplexIconDimensionsTVPostersWrap</include>
+					<texture>multiplex/multiplex_glass.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+				</control>				
+				<control type="image">
+					<include>MultiplexIconDimensionsTVPostersWrapReflect</include>
+					<texture background="true" flipy="true" diffuse="multiplex/multiplex_maskreflect.png">defaultvideo.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<info>ListItem.Icon</info>
+				</control>		
+			</itemlayout>
+			<focusedlayout width="130" height="300" condition="Skin.HasSetting(videotv)">
+			<control type="image">
+					<include>MultiplexIconDimensionsTVPostersWrap</include>
+					<texture diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<include>Animation_MultiplexFocusZoom</include>					
+				</control>			
+				<control type="image">
+					<include>MultiplexIconDimensionsTVPostersWrap</include>
+					<texture background="true" diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<info>ListItem.Icon</info>
+					<include>Animation_MultiplexFocusZoom</include>
+				</control>
+				<control type="image">
+					<include>MultiplexIconDimensionsTVPostersWrap</include>
+					<bordertexture border="-17">multiplex/multiplex_border.png</bordertexture>
+					<texture>common/blank.png</texture>
+					<include>Animation_MultiplexFocusZoom</include>					
+				</control>
+				<control type="image">
+					<include>MultiplexIconDimensionsTVPostersWrap</include>
+					<texture>multiplex/multiplex_glass.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<include>Animation_MultiplexFocusZoom</include>						
+				</control>				
+				<control type="image">
+					<include>MultiplexIconDimensionsTVPostersWrapReflect</include>
+					<texture background="true" flipy="true" diffuse="multiplex/multiplex_maskreflect.png">defaultvideo.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<info>ListItem.Icon</info>
+					<include>Animation_MultiplexFocusZoom</include>					
+				</control>			
+			</focusedlayout>		
+			
+		</control>		
+
+
+		<control type="fixedlist" id="52">
+			<viewtype label="31757">wrap</viewtype>
+			<include condition="Skin.HasSetting(videotv)">MultiplexTVVarsWrap</include>			
+			<pagecontrol>60</pagecontrol>
+			<onleft>52</onleft>
+			<onright>52</onright>
+			<include condition="[Skin.HasSetting(videomovies) + !Skin.HasSetting(multiplexinfotrigger)] | [Skin.HasSetting(videotv) + !Skin.HasSetting(multiplextvinfotrigger)]">MultiplexInfoAutoUp</include>
+			<include condition="[Skin.HasSetting(videomovies) + Skin.HasSetting(multiplexinfotrigger)] | [Skin.HasSetting(videotv) + Skin.HasSetting(multiplextvinfotrigger)]">MultiplexInfoTriggerUp</include>
+			<ondown>60</ondown>
+			<orientation>horizontal</orientation>
+			<include condition="Skin.HasSetting(videotv)">MultiplexFocusTV</include>
+			<scrolltime>200</scrolltime>
+			<visible>Window.IsActive(25) + Container.Content(episodes)</visible>
+			<include>Animation_HideMultiplex</include>
+		
 			<itemlayout width="219" height="300" condition="Skin.HasSetting(videotv)">
 				<control type="image">
 					<include>MultiplexIconDimensionsTVWrap</include>
@@ -941,9 +1129,10 @@
 					<include>Animation_VisibleChange200</include>
 					<visible>false</visible>
 				</control>
-			</focusedlayout>			
+			</focusedlayout>				
 
 		</control>	
+
 
 		<control type="scrollbar" id="60">
 			<description>My first scroll bar control</description>
@@ -1035,11 +1224,6 @@
 				<info>ListItem.Label2</info>
 				<include>ShowcaseDetailLabel</include>
 				<visible>Window.IsActive(1) | Container.Content(albums) | Window.IsActive(501)</visible>
-			</control>
-			<control type="label" id="72">
-				<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
-				<include>ShowcaseDetailLabel</include>
-				<visible>[Container.Content(tvshows)] + !IsEmpty(ListItem.Genre)</visible>
 			</control>
 			<control type="label" id="72">
 				<label>$INFO[ListItem.TVShowTitle]</label>
