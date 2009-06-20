@@ -718,18 +718,18 @@
 
 	<include name="Viewtype_Multiplex">
 	
-        <control type="button" id="110">
-            <posx>0</posx>
-            <posy>0</posy>
-            <width>0</width>
-            <height>0</height>
-            <texturefocus>-</texturefocus>
-            <texturenofocus>-</texturenofocus>
-            <onleft>52</onleft>
-            <onright>52</onright>
-            <onup>7000</onup>
-            <ondown>52</ondown>
-        </control>
+		<control type="button" id="110">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>0</width>
+			<height>0</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onleft>52</onleft>
+			<onright>52</onright>
+			<onup>7000</onup>
+			<ondown>52</ondown>
+		</control>
 
 		<control type="image">
 			<posx>18</posx>
@@ -1033,14 +1033,13 @@
 					<info>ListItem.Icon</info>
 				</control>				
 				<control type="image">
-					<posx>181</posx>
+					<posx>161</posx>
 					<posy>39</posy>
 					<width>48</width>
 					<height>52</height>
 					<info>ListItem.Overlay</info>
-					<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(episodes)</visible>
 					<include>Animation_VisibleChange200</include>
-					<visible>false</visible>
 				</control>
 				<control type="image">
 					<posx>14</posx>
@@ -1120,14 +1119,13 @@
 					<include>Animation_MultiplexTVFocusZoom</include>					
 				</control>					
 				<control type="image">
-					<posx>181</posx>
+					<posx>171</posx>
 					<posy>39</posy>
 					<width>48</width>
 					<height>52</height>
 					<info>ListItem.Overlay</info>
-					<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(episodes)</visible>
 					<include>Animation_VisibleChange200</include>
-					<visible>false</visible>
 				</control>
 			</focusedlayout>				
 
@@ -1157,18 +1155,18 @@
 			<include>Animation_CommonFade</include>
 		</control>
 		
-        <control type="button" id="197">
-            <posx>0</posx>
-            <posy>0</posy>
-            <width>0</width>
-            <height>0</height>
-            <texturefocus>-</texturefocus>
-            <texturenofocus>-</texturenofocus>
-            <onleft>52</onleft>
-            <onright>52</onright>
-            <onup>52</onup>
-            <ondown>52</ondown>
-        </control>		
+		<control type="button" id="197">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>0</width>
+			<height>0</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onleft>52</onleft>
+			<onright>52</onright>
+			<onup>52</onup>
+			<ondown>52</ondown>
+		</control>		
 
 		<control type="group">
 			<visible>Control.IsVisible(52)</visible>
