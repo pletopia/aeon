@@ -444,12 +444,27 @@
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture fallback="flags/sdtv.png">$INFO[ListItem.Studio,flags/studios/,.png]</texture>
-					<visible>substring(ListItem.VideoResolution,480) | substring(ListItem.VideoResolution,540)</visible>
+					<visible>[substring(ListItem.VideoResolution,480) | substring(ListItem.VideoResolution,540)] + !substring(listitem.filename,dvd) + !substring(listitem.filename,bluray) + !substring(listitem.filename,blu-ray) + !substring(listitem.filename,bdrip) + !substring(listitem.filename,.iso,Right) + !substring(listitem.filename,.ifo,Right)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture fallback="flags/hdtv.png">$INFO[ListItem.Studio,flags/studios/,_hd.png]</texture>
-					<visible>substring(ListItem.VideoResolution,720) | substring(ListItem.VideoResolution,1080)</visible>
+					<visible>[substring(ListItem.VideoResolution,720) | substring(ListItem.VideoResolution,1080)] + !substring(listitem.filename,dvd) + !substring(listitem.filename,bluray) + !substring(listitem.filename,blu-ray) + !substring(listitem.filename,bdrip) + !substring(listitem.filename,.iso,Right) + !substring(listitem.filename,.ifo,Right)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_EpisodeMediaFlagsVars</include>
+					<texture>flags/hddvd.png</texture>
+					<visible>substring(listitem.filename,hddvd) | substring(listitem.filename,hd-dvd)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_EpisodeMediaFlagsVars</include>
+					<texture>flags/bluray.png</texture>
+					<visible>substring(listitem.filename,bluray) | substring(listitem.filename,blu-ray) | substring(listitem.filename,bdrip)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_EpisodeMediaFlagsVars</include>
+					<texture>flags/dvd.png</texture>
+					<visible>[substring(listitem.filename,dvd) + !substring(listitem.filename,hddvd) + !substring(listitem.filename,hd-dvd)] | substring(listitem.filename,.iso,Right) | substring(listitem.filename,.ifo,Right)</visible>
 				</control>
 			</control>
 
