@@ -151,4 +151,11 @@
 	<include>common-fade-quick</include>
 </include>
 
+<!-- Undefined styles fix -->
+<include name="Animations_SettingsButtonFade">
+</include>
+
+<include name="FullScreenDimensions">
+</include>
+
 </includes>
