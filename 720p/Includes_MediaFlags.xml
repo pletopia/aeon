@@ -154,7 +154,7 @@
 		<control type="image" id="91">
 			<include>Furniture_MovieInfoFlagSource</include>
 			<texture>$INFO[ListItem.VideoCodec,flags/info/,.png]</texture>
-			<visible>!substring(listitem.foldername,dvd) + !substring(listitem.foldername,bluray) + !substring(listitem.foldername,blu-ray) + !substring(listitem.foldername,bdrip) + !substring(listitem.foldername,.iso,Right) + !substring(listitem.foldername,.ifo,Right)</visible>
+			<visible>!substring(listitem.foldername,dvdrip) + !substring(listitem.foldername,hddvd) + !substring(listitem.foldername,bluray) + !substring(listitem.foldername,blu-ray) + !substring(listitem.foldername,bdrip) + !substring(listitem.foldername,.iso,Right) + !substring(listitem.foldername,.ifo,Right)</visible>
 		</control>
 
 		<control type="image" id="91">
@@ -172,7 +172,7 @@
 		<control type="image" id="91">
 			<include>Furniture_MovieInfoFlagSource</include>
 			<texture>flags/info/dvd.png</texture>
-			<visible>[substring(listitem.foldername,dvd) + !substring(listitem.foldername,hddvd) + !substring(listitem.foldername,hd-dvd)] | substring(listitem.foldername,.iso,Right) | substring(listitem.foldername,.ifo,Right)</visible>
+			<visible>[substring(listitem.foldername,dvdrip) + !substring(listitem.foldername,hddvd) + !substring(listitem.foldername,hddvd) + !substring(listitem.foldername,hd-dvd)] | substring(listitem.foldername,.iso,Right) | substring(listitem.foldername,.ifo,Right)</visible>
 		</control>
 
 		<control type="image" id="92">
@@ -315,7 +315,7 @@
 				<control type="image" id="82">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
 					<texture>$INFO[ListItem.VideoCodec,flags/,.png]</texture>
-					<visible>!substring(listitem.foldername,dvd) + !substring(listitem.foldername,bluray) + !substring(listitem.foldername,blu-ray) + !substring(listitem.foldername,bdrip) + !substring(listitem.foldername,.iso,Right) + !substring(listitem.foldername,.ifo,Right)</visible>
+					<visible>!substring(listitem.foldername,dvdrip) + !substring(listitem.foldername,hddvd) + !substring(listitem.foldername,bluray) + !substring(listitem.foldername,blu-ray) + !substring(listitem.foldername,bdrip) + !substring(listitem.foldername,.iso,Right) + !substring(listitem.foldername,.ifo,Right)</visible>
 				</control>
 				<control type="image" id="82">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
@@ -330,7 +330,7 @@
 				<control type="image" id="82">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
 					<texture>flags/dvd.png</texture>
-					<visible>[substring(listitem.foldername,dvd) + !substring(listitem.foldername,hddvd) + !substring(listitem.foldername,hd-dvd)] | substring(listitem.foldername,.iso,Right) | substring(listitem.foldername,.ifo,Right)</visible>
+					<visible>[substring(listitem.foldername,dvdrip) + !substring(listitem.foldername,hddvd) + !substring(listitem.foldername,hddvd) + !substring(listitem.foldername,hd-dvd)] | substring(listitem.foldername,.iso,Right) | substring(listitem.foldername,.ifo,Right)</visible>
 				</control>
 			</control>
 		</control>
@@ -429,12 +429,12 @@
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture fallback="flags/sdtv.png">$INFO[ListItem.Studio,flags/studios/,.png]</texture>
-					<visible>[substring(ListItem.VideoResolution,480) | substring(ListItem.VideoResolution,540)] + !substring(listitem.foldername,dvd) + !substring(listitem.foldername,bluray) + !substring(listitem.foldername,blu-ray) + !substring(listitem.foldername,bdrip) + !substring(listitem.foldername,.iso,Right) + !substring(listitem.foldername,.ifo,Right)</visible>
+					<visible>[substring(ListItem.VideoResolution,480) | substring(ListItem.VideoResolution,540)] + !substring(listitem.foldername,dvdrip) + !substring(listitem.foldername,hddvd) + !substring(listitem.foldername,bluray) + !substring(listitem.foldername,blu-ray) + !substring(listitem.foldername,bdrip) + !substring(listitem.foldername,.iso,Right) + !substring(listitem.foldername,.ifo,Right)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture fallback="flags/hdtv.png">$INFO[ListItem.Studio,flags/studios/,_hd.png]</texture>
-					<visible>[substring(ListItem.VideoResolution,720) | substring(ListItem.VideoResolution,1080)] + !substring(listitem.foldername,dvd) + !substring(listitem.foldername,bluray) + !substring(listitem.foldername,blu-ray) + !substring(listitem.foldername,bdrip) + !substring(listitem.foldername,.iso,Right) + !substring(listitem.foldername,.ifo,Right)</visible>
+					<visible>[substring(ListItem.VideoResolution,720) | substring(ListItem.VideoResolution,1080)] + !substring(listitem.foldername,dvdrip) + !substring(listitem.foldername,hddvd) + !substring(listitem.foldername,bluray) + !substring(listitem.foldername,blu-ray) + !substring(listitem.foldername,bdrip) + !substring(listitem.foldername,.iso,Right) + !substring(listitem.foldername,.ifo,Right)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlagsVars</include>
@@ -449,7 +449,7 @@
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/dvd.png</texture>
-					<visible>[substring(listitem.foldername,dvd) + !substring(listitem.foldername,hddvd) + !substring(listitem.foldername,hd-dvd)] | substring(listitem.foldername,.iso,Right) | substring(listitem.foldername,.ifo,Right)</visible>
+					<visible>[substring(listitem.foldername,dvdrip) + !substring(listitem.foldername,hddvd) + !substring(listitem.foldername,hddvd) + !substring(listitem.foldername,hd-dvd)] | substring(listitem.foldername,.iso,Right) | substring(listitem.foldername,.ifo,Right)</visible>
 				</control>
 			</control>
 
