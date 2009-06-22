@@ -86,6 +86,13 @@
 			<label>USE LEGACY 'DARK' MULTIPLEX</label>
 			<onclick>Skin.ToggleSetting(oldmultiplex)</onclick>
 			<selected>Skin.HasSetting(oldmultiplex)</selected>
+		</control>
+
+		<control type="radiobutton" id="406">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>Display Time / Finish Time on Video OSD</label>
+			<onclick>Skin.ToggleSetting(FinishTimeOnVideoOSD)</onclick>
+			<selected>Skin.HasSetting(FinishTimeOnVideoOSD)</selected>
 		</control>		
 		
 	</control>
