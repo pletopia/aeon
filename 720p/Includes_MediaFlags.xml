@@ -428,28 +428,13 @@
 				<posx>80</posx>
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlagsVars</include>
-					<texture fallback="flags/sdtv.png">$INFO[ListItem.Studio,flags/studios/,.png]</texture>
-					<visible>[substring(ListItem.VideoResolution,480) | substring(ListItem.VideoResolution,540)] + !substring(listitem.foldername,dvdrip) + !substring(listitem.foldername,hddvd) + !substring(listitem.foldername,bluray) + !substring(listitem.foldername,blu-ray) + !substring(listitem.foldername,bdrip) + !substring(listitem.foldername,.iso,Right) + !substring(listitem.foldername,.ifo,Right)</visible>
+					<texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
+					<visible>substring(ListItem.VideoResolution,480) | substring(ListItem.VideoResolution,540)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlagsVars</include>
-					<texture fallback="flags/hdtv.png">$INFO[ListItem.Studio,flags/studios/,_hd.png]</texture>
-					<visible>[substring(ListItem.VideoResolution,720) | substring(ListItem.VideoResolution,1080)] + !substring(listitem.foldername,dvdrip) + !substring(listitem.foldername,hddvd) + !substring(listitem.foldername,bluray) + !substring(listitem.foldername,blu-ray) + !substring(listitem.foldername,bdrip) + !substring(listitem.foldername,.iso,Right) + !substring(listitem.foldername,.ifo,Right)</visible>
-				</control>
-				<control type="image" id="81">
-					<include>Furniture_EpisodeMediaFlagsVars</include>
-					<texture>flags/hddvd.png</texture>
-					<visible>substring(listitem.foldername,hddvd) | substring(listitem.foldername,hd-dvd)</visible>
-				</control>
-				<control type="image" id="81">
-					<include>Furniture_EpisodeMediaFlagsVars</include>
-					<texture>flags/bluray.png</texture>
-					<visible>substring(listitem.foldername,bluray) | substring(listitem.foldername,blu-ray) | substring(listitem.foldername,bdrip)</visible>
-				</control>
-				<control type="image" id="81">
-					<include>Furniture_EpisodeMediaFlagsVars</include>
-					<texture>flags/dvd.png</texture>
-					<visible>[substring(listitem.foldername,dvdrip) + !substring(listitem.foldername,hddvd) + !substring(listitem.foldername,hddvd) + !substring(listitem.foldername,hd-dvd)] | substring(listitem.foldername,.iso,Right) | substring(listitem.foldername,.ifo,Right)</visible>
+					<texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
+					<visible>substring(ListItem.VideoResolution,720) | substring(ListItem.VideoResolution,1080)</visible>
 				</control>
 			</control>
 
@@ -463,7 +448,28 @@
 				</control>
 				<control type="image" id="92">
 					<include>Furniture_EpisodeMediaFlagsVars</include>
-					<texture>$INFO[ListItem.VideoCodec,flags/,.png]</texture>
+					<texture>flags/bluray.png</texture>
+					<visible>substring(listitem.foldername,bluray) | substring(listitem.foldername,blu-ray) | substring(listitem.foldername,bdrip)</visible>
+				</control>
+				<control type="image" id="92">
+					<include>Furniture_EpisodeMediaFlagsVars</include>
+					<texture>flags/hdtv.png</texture>
+					<visible>substring(listitem.foldername,hdtv) | substring(listitem.foldername,hd tv) | substring(listitem.foldername,hd-tv)</visible>
+				</control>
+				<control type="image" id="92">
+					<include>Furniture_EpisodeMediaFlagsVars</include>
+					<texture>flags/dvd.png</texture>
+					<visible>substring(listitem.foldername,dvdrip) | substring(listitem.foldername,sd-dvd) | substring(listitem.foldername,sd dvd)</visible>
+				</control>
+				<control type="image" id="92">
+					<include>Furniture_EpisodeMediaFlagsVars</include>
+					<texture>flags/sdtv.png</texture>
+					<visible>substring(listitem.foldername,sdtv) | substring(listitem.foldername,sd-tv) | substring(listitem.foldername,sd tv)</visible>
+				</control>
+				<control type="image" id="92">
+					<include>Furniture_EpisodeMediaFlagsVars</include>
+					<texture>flags/hddvd.png</texture>
+					<visible>substring(listitem.foldername,hddvd) | substring(listitem.foldername,hd-dvd) | substring(listitem.foldername,hd dvd)</visible>
 				</control>
 			</control>
 
