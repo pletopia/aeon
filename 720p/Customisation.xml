@@ -124,7 +124,16 @@
 			<label>31252</label>
 			<onclick>Skin.ToggleSetting(nohomegradient)</onclick>
 			<selected>!Skin.HasSetting(nohomegradient)</selected>
-		</control>		
+		</control>
+
+		<!-- Weather Backdrop by Current Weather Conditions -->
+		<control type="radiobutton" id="504">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>Weather Backdrop by Current Weather Conditions</label>
+			<onclick>Skin.ToggleSetting(CustomWeatherConditions)</onclick>
+			<selected>Skin.HasSetting(CustomWeatherConditions)</selected>
+		</control>			
+		<!-- End -->[/B]		
 		
 	</control>
 	
