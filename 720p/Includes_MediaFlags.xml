@@ -332,6 +332,11 @@
 					<texture>flags/dvd.png</texture>
 					<visible>[substring(listitem.foldername,dvdrip) + !substring(listitem.foldername,hddvd) + !substring(listitem.foldername,hddvd) + !substring(listitem.foldername,hd-dvd)] | substring(listitem.foldername,.iso,Right) | substring(listitem.foldername,.ifo,Right)</visible>
 				</control>
+				<control type="image" id="82">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/dvb.png</texture>
+					<visible>substring(listitem.foldername,dvb)</visible>
+				</control>
 			</control>
 		</control>
 	</include>
@@ -470,6 +475,11 @@
 					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/hddvd.png</texture>
 					<visible>substring(listitem.foldername,hddvd) | substring(listitem.foldername,hd-dvd) | substring(listitem.foldername,hd dvd)</visible>
+				</control>
+				<control type="image" id="92">
+					<include>Furniture_EpisodeMediaFlagsVars</include>
+					<texture>flags/dvb.png</texture>
+					<visible>substring(listitem.foldername,dvb)</visible>
 				</control>
 			</control>
 
