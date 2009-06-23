@@ -38,19 +38,20 @@
 			<texture>dialogs/context_bottom.png</texture>
 		</control>
 		<control type="button" id="1000">
-			<description>button template</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<height>39</height>
-			<width>308</width>
-			<textcolor>FF383838</textcolor>
-			<focusedcolor>FFdfdfdf</focusedcolor>
-			<texturenofocus>dialogs/context_nofocus.png</texturenofocus>
-			<texturefocus>dialogs/context_highlight.png</texturefocus>
-			<align>center</align>
-			<aligny>top</aligny>
-			<font>Font_ContextMenuButton</font>
-			<textoffsety>8</textoffsety>
-		</control>
+      			<description>button template</description>
+      			<posx>0</posx>
+      			<posy>0</posy>
+      			<height>39</height>
+      			<width>308</width>
+      			<textcolor>FF383838</textcolor>
+      			<focusedcolor>FFdfdfdf</focusedcolor>
+      			<texturenofocus>dialogs/context_nofocus.png</texturenofocus>
+     			 <texturefocus>dialogs/context_highlight.png</texturefocus>
+      			<pulseonselect>true</pulseonselect>
+      			<align>center</align>
+      			<aligny>top</aligny>
+      			<font>Font_ContextMenuButton</font>
+      			<textoffsety>8</textoffsety>
+    		</control>
 	</controls>
 </window>

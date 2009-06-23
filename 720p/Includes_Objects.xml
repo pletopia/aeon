@@ -720,6 +720,9 @@
 		<focusedcolor>FFdfdfdf</focusedcolor>
 		<texturenofocus>dialogs/context_nofocus.png</texturenofocus>
 		<texturefocus>dialogs/context_highlight.png</texturefocus>
+		<alttexturefocus>dialogs/context_highlight.png</alttexturefocus>
+		<alttexturenofocus>dialogs/context_nofocus.png</alttexturenofocus>
+		<pulseonselect>true</pulseonselect>
 		<align>center</align>
 		<aligny>top</aligny>
 		<font>Font_ContextMenuButton</font>
@@ -737,13 +740,13 @@
 		<texturefocus>dialogs/context_highlight.png</texturefocus>
 		<textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
 		<textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
+		<pulseonselect>true</pulseonselect>
 		<width>269</width>
 		<height>39</height>
 		<align>left</align>
 		<font>Font_ContextMenuButton</font>
 		<textoffsetx>10</textoffsetx>
-	</include>
-	
+	</include>	
 <!-- Settings screens -->
 
 	<include name="Objects_SettingsSectionTitle">
