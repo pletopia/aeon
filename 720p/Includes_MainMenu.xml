@@ -39,6 +39,13 @@
 	<ondown>351</ondown>
 </include>
 
+<!-- MOD: Lock Menu Bar -->
+<include name="DownForSub2">
+	<onup>300</onup>
+	<ondown>351</ondown>
+</include>
+<!-- END MOD: Lock Menu Bar -->
+
 <!-- Weather Backdrop by Current Weather Conditions -->
 	<include name="BackgroundVarsWeather2">
 		<thumb>$INFO[Skin.String(CustomWeather)]$INFO[Weather.FanartCode]</thumb>		
@@ -78,8 +85,15 @@
 		<orientation>horizontal</orientation>
 		<focusposition>2</focusposition>
 		<scrolltime>200</scrolltime>
+<!-- MOD: Lock Menu Bar -->
+<!-- Old code
 		<include condition="!Skin.HasSetting(onetouch)">DownForSub</include>
-		<include condition="Skin.HasSetting(onetouch)">PushForSub</include>		
+		<include condition="Skin.HasSetting(onetouch)">PushForSub</include>
+-->
+		<include condition="!Skin.HasSetting(onetouch) + !Skin.HasSetting(HomeMenuBarAnimation)">DownForSub2</include>
+		<include condition="!Skin.HasSetting(onetouch) + Skin.HasSetting(HomeMenuBarAnimation)">DownForSub</include>
+		<include condition="Skin.HasSetting(onetouch) + Skin.HasSetting(HomeMenuBarAnimation)">PushForSub</include>
+<!-- END MOD: Lock Menu Bar -->	
 		<onfocus>SetFocus(299)</onfocus>
 		<animation type="WindowOpen" condition="!Skin.HasSetting(nozooms)" reversible="false">
 			<effect type="slide" start="-1280" end="0" time="400" tween="quadratic" easing="out" />
