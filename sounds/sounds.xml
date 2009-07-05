@@ -2,31 +2,31 @@
   <actions>
     <action>
       <name>left</name>
-      <file>-</file>
+      <file>left.wav</file>
     </action>
     <action>
       <name>right</name>
-      <file>-</file>
+      <file>right.wav</file>
     </action>
     <action>
       <name>up</name>
-      <file>-</file>
+      <file>up.wav</file>
     </action>
     <action>
       <name>down</name>
-      <file>-</file>
+      <file>down.wav</file>
     </action>
     <action>
       <name>select</name>
-      <file>-</file>
+      <file>select.wav</file>
     </action>
     <action>
       <name>parentdir</name>
-      <file>-</file>
+      <file>back.wav</file>
     </action>
     <action>
       <name>previousmenu</name>
-      <file>-</file>
+      <file>back.wav</file>
     </action>
     <action>
       <name>screenshot</name>
@@ -37,7 +37,7 @@
   <windows>
     <window>
       <name>startup</name>
-      <activate>-</activate>
+      <activate>startup.wav</activate>
     </window>
     <window>
       <name>0</name>
