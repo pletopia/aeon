@@ -770,6 +770,7 @@
 			<include condition="Skin.HasSetting(videomovies)">MultiplexFocusMovies</include>
 			<include condition="Skin.HasSetting(videotv)">MultiplexFocusMovies</include>
 			<scrolltime>200</scrolltime>
+			<preloaditems>18</preloaditems>
 			<visible>Window.IsActive(25) + !Container.Content(episodes) + !Container.Content(seasons)</visible>
 			<include>Animation_HideMultiplex</include>
 			<itemlayout width="120" height="300" condition="Container.Content(movies)">
@@ -916,6 +917,7 @@
 			<orientation>horizontal</orientation>
 			<include condition="Skin.HasSetting(videotv)">MultiplexFocusMovies</include>
 			<scrolltime>200</scrolltime>
+			<preloaditems>18</preloaditems>
 			<visible>Window.IsActive(25) + !Container.Content(episodes) + Container.Content(seasons)</visible>
 			<include>Animation_HideMultiplex</include>
 			<itemlayout width="130" height="300" condition="Skin.HasSetting(videotv)">
