@@ -618,7 +618,7 @@
 					<width>668</width>
 					<height>376</height>
 					<fadetime>400</fadetime>
-					<aspectratio>scale</aspectratio>
+					<aspectratio>keep</aspectratio>
 					<texture>$INFO[Container(52).listitem.thumb]</texture>
 					<visible>Skin.HasSetting(multiplextvbigthumb) + Container.Content(episodes)</visible>
 					<include>Animation_VisibleChange200</include>
@@ -777,12 +777,12 @@
 				<control type="image">
 					<include>MultiplexIconDimensionsWrap</include>
 					<texture diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 				</control>
 				<control type="image">
 					<include>MultiplexIconDimensionsWrap</include>
 					<texture background="true" diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 					<info>ListItem.Icon</info>
 				</control>
 				<control type="image">
@@ -793,12 +793,12 @@
 				<control type="image">
 					<include>MultiplexIconDimensionsWrap</include>
 					<texture>multiplex/multiplex_glass.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 				</control>				
 				<control type="image">
 					<include>MultiplexIconDimensionsWrapReflect</include>
 					<texture background="true" flipy="true" diffuse="multiplex/multiplex_maskreflect.png">defaultvideo.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 					<info>ListItem.Icon</info>
 				</control>				
 			</itemlayout>
@@ -806,13 +806,13 @@
 				<control type="image">
 					<include>MultiplexIconDimensionsWrap</include>
 					<texture diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 					<include>Animation_MultiplexFocusZoom</include>					
 				</control>			
 				<control type="image">
 					<include>MultiplexIconDimensionsWrap</include>
 					<texture background="true" diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 					<info>ListItem.Icon</info>
 					<include>Animation_MultiplexFocusZoom</include>
 				</control>
@@ -825,13 +825,13 @@
 				<control type="image">
 					<include>MultiplexIconDimensionsWrap</include>
 					<texture>multiplex/multiplex_glass.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 					<include>Animation_MultiplexFocusZoom</include>						
 				</control>				
 				<control type="image">
 					<include>MultiplexIconDimensionsWrapReflect</include>
 					<texture background="true" flipy="true" diffuse="multiplex/multiplex_maskreflect.png">defaultvideo.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 					<info>ListItem.Icon</info>
 					<include>Animation_MultiplexFocusZoom</include>					
 				</control>					
@@ -842,12 +842,12 @@
 				<control type="image">
 					<include>MultiplexIconDimensionsTVPostersWrap</include>
 					<texture diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 				</control>
 				<control type="image">
 					<include>MultiplexIconDimensionsTVPostersWrap</include>
 					<texture background="true" diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 					<info>ListItem.Icon</info>
 				</control>
 				<control type="image">
@@ -858,12 +858,12 @@
 				<control type="image">
 					<include>MultiplexIconDimensionsTVPostersWrap</include>
 					<texture>multiplex/multiplex_glass.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 				</control>				
 				<control type="image">
 					<include>MultiplexIconDimensionsTVPostersWrapReflect</include>
 					<texture background="true" flipy="true" diffuse="multiplex/multiplex_maskreflect.png">defaultvideo.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 					<info>ListItem.Icon</info>
 				</control>		
 			</itemlayout>
@@ -871,13 +871,13 @@
 			<control type="image">
 					<include>MultiplexIconDimensionsTVPostersWrap</include>
 					<texture diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 					<include>Animation_MultiplexFocusZoom</include>					
 				</control>			
 				<control type="image">
 					<include>MultiplexIconDimensionsTVPostersWrap</include>
 					<texture background="true" diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 					<info>ListItem.Icon</info>
 					<include>Animation_MultiplexFocusZoom</include>
 				</control>
@@ -890,13 +890,13 @@
 				<control type="image">
 					<include>MultiplexIconDimensionsTVPostersWrap</include>
 					<texture>multiplex/multiplex_glass.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 					<include>Animation_MultiplexFocusZoom</include>						
 				</control>				
 				<control type="image">
 					<include>MultiplexIconDimensionsTVPostersWrapReflect</include>
 					<texture background="true" flipy="true" diffuse="multiplex/multiplex_maskreflect.png">defaultvideo.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 					<info>ListItem.Icon</info>
 					<include>Animation_MultiplexFocusZoom</include>					
 				</control>			
@@ -924,12 +924,12 @@
 				<control type="image">
 					<include>MultiplexIconDimensionsTVPostersWrap</include>
 					<texture diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 				</control>
 				<control type="image">
 					<include>MultiplexIconDimensionsTVPostersWrap</include>
 					<texture background="true" diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 					<info>ListItem.Icon</info>
 				</control>
 				<control type="image">
@@ -940,12 +940,12 @@
 				<control type="image">
 					<include>MultiplexIconDimensionsTVPostersWrap</include>
 					<texture>multiplex/multiplex_glass.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 				</control>				
 				<control type="image">
 					<include>MultiplexIconDimensionsTVPostersWrapReflect</include>
 					<texture background="true" flipy="true" diffuse="multiplex/multiplex_maskreflect.png">defaultvideo.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 					<info>ListItem.Icon</info>
 				</control>		
 			</itemlayout>
@@ -953,13 +953,13 @@
 			<control type="image">
 					<include>MultiplexIconDimensionsTVPostersWrap</include>
 					<texture diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 					<include>Animation_MultiplexFocusZoom</include>					
 				</control>			
 				<control type="image">
 					<include>MultiplexIconDimensionsTVPostersWrap</include>
 					<texture background="true" diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 					<info>ListItem.Icon</info>
 					<include>Animation_MultiplexFocusZoom</include>
 				</control>
@@ -972,13 +972,13 @@
 				<control type="image">
 					<include>MultiplexIconDimensionsTVPostersWrap</include>
 					<texture>multiplex/multiplex_glass.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 					<include>Animation_MultiplexFocusZoom</include>						
 				</control>				
 				<control type="image">
 					<include>MultiplexIconDimensionsTVPostersWrapReflect</include>
 					<texture background="true" flipy="true" diffuse="multiplex/multiplex_maskreflect.png">defaultvideo.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 					<info>ListItem.Icon</info>
 					<include>Animation_MultiplexFocusZoom</include>					
 				</control>			
@@ -1010,7 +1010,7 @@
 				<control type="image">
 					<include>MultiplexIconDimensionsTVWrap</include>
 					<texture diffuse="multiplex/multiplex_tvmask.png">defaultvideo.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 					<info>ListItem.Icon</info>
 				</control>
 				<control type="image">
@@ -1021,7 +1021,7 @@
 				<control type="image">
 					<include>MultiplexIconDimensionsTVWrap</include>
 					<texture diffuse="multiplex/multiplex_tvmask.png">multiplex/multiplex_tvglass.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 				</control>				
 				<control type="image">
 					<include>MultiplexIconDimensionsTVWrap</include>
@@ -1031,7 +1031,7 @@
 				<control type="image">
 					<include>MultiplexIconDimensionsTVWrapReflect</include>
 					<texture flipy="true" diffuse="multiplex/multiplex_tvmaskreflect.png">defaultvideo.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 					<info>ListItem.Icon</info>
 				</control>				
 				<control type="image">
@@ -1091,7 +1091,7 @@
 				<control type="image">
 					<include>MultiplexIconDimensionsTVWrap</include>
 					<texture diffuse="multiplex/multiplex_tvmask.png">defaultvideo.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 					<info>ListItem.Icon</info>
 					<include>Animation_MultiplexTVFocusZoom</include>					
 				</control>							
@@ -1104,7 +1104,7 @@
 				<control type="image">
 					<include>MultiplexIconDimensionsTVWrap</include>
 					<texture diffuse="multiplex/multiplex_tvmask.png">multiplex/multiplex_tvglass.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 					<include>Animation_MultiplexTVFocusZoom</include>					
 				</control>				
 				<control type="image">
@@ -1116,7 +1116,7 @@
 				<control type="image">
 					<include>MultiplexIconDimensionsTVWrapReflect</include>
 					<texture flipy="true" diffuse="multiplex/multiplex_tvmaskreflect.png">defaultvideo.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<aspectratio scalediffuse="false">keep</aspectratio>
 					<info>ListItem.Icon</info>
 					<include>Animation_MultiplexTVFocusZoom</include>					
 				</control>					
